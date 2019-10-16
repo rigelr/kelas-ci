@@ -80,12 +80,13 @@ class mahasiswa extends CI_Controller {
             $this->load->view('template/header',$data);
             $this->load->view('mahasiswa/edit',$data);
             $this->load->view('template/footer');
+            echo "masuk";
         }
         else{
             $this->mahasiswa_model->ubahdatamhs();
             $this->session->set_flashdata('flash-data','diedit');
             redirect('mahasiswa','refresh');
-            
+            echo "keluar";
         }
         
     }
